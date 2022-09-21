@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  text-align: center;
+}
+
+
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 2px solid #6504b5;
+}
+
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+	color: white;
+  background-color: #6504b5;
+}
+</style>
+
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="PetHomepage.css">
+
+<form method="POST">	
+<div class="header">
+  	<a href="GuestHomepage.html" class="logo">PetAdoption Assistant</a>
+  	<div class="header-right">
+    	<a class="active" href="GuestHomepage.html">Home</a>
+    	<a href="PetLogin.php">Sign In/Sign Up</a>
+  </div>
+</div>
+</form>
+
+<div class="row">
+  <div class="left" style="background-color:#efeef1;">
+    <h2>Search Bar</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">Dog</a></li>
+      <li><a href="#">Cat</a></li>
+      <li><a href="#">Rabbits</a></li>
+      <li><a href="#">Small and Furry</a></li>
+      <li><a href="#">Scales, Fins, & Other</a></li>
+      <li><a href="#">Birds</a></li>
+      <li><a href="#">Horses</a></li>
+      <li><a href="#">Barnyard</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="footer">
+  <p>@2022 PetAdoption Assistant</p>
+</div>
+
+
+</body>
+</html>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>

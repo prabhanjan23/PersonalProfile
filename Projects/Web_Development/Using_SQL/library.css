@@ -1,0 +1,19 @@
+::placeholder{
+	color: red;
+	opacity: 0.5;
+}
+
+fieldset{
+	height: 200 px;
+	width: 150 px;
+}
+
+fieldset table {
+	/*background-color: green;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	*/
+	border: 10px;
+}

@@ -104,7 +104,6 @@ int main(int argc, const char * argv[]) {
     
     max = (salary/12) * .15;
     
-    
     struct vehicle toyotacar[10];
     
     int number = 1;
@@ -122,6 +121,7 @@ int main(int argc, const char * argv[]) {
         }
     }
     
+    
     int valid1 = 0;
     int valid2 = 0;
     if(indexT > 0){
@@ -134,6 +134,8 @@ int main(int argc, const char * argv[]) {
             }
         }
         choices[0] = number;
+    }else{
+        choices[0] = 0;
     }
     
     
@@ -165,6 +167,8 @@ int main(int argc, const char * argv[]) {
         printf("%d)Chevrolet ", number);
         choices[1] = number;
         number++;
+    }else{
+        choices[1] = 0;
     }
     
     
@@ -194,6 +198,8 @@ int main(int argc, const char * argv[]) {
             }
         }
         choices[2] = number;
+    }else{
+        choices[2] = 0;
     }
     
     
@@ -225,6 +231,8 @@ int main(int argc, const char * argv[]) {
         printf("%d)BMW ", number);
         choices[3] = number;
         number++;
+    }else{
+        choices[3] = 0;
     }
     
     
@@ -258,6 +266,8 @@ int main(int argc, const char * argv[]) {
 
         }
         choices[4] = number;
+    }else{
+        choices[4] = 0;
     }
     
     
@@ -284,6 +294,7 @@ int main(int argc, const char * argv[]) {
         number++;
     }
     
+    
     int select = 0;
     int manufacturer;
     printf("\n\nSelect Manufacturer: ");
@@ -291,7 +302,7 @@ int main(int argc, const char * argv[]) {
     
     for(int i = 0; i < 5; i++){
         if(choices[i] == manufacturer){
-            select = i+1;
+            select = (i+1);
         }
     }
     
